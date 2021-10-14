@@ -19,6 +19,6 @@ primo n = aux 2
           | otherwise      = aux (k + 1)
 
 primi :: Int -> [Int]
-primi x | x < 2 = [x]
-        | primo x = x : primi (x-1)
+primi x | x < 3 = []
+        | primo x = primi (x-1) ++ [x] 
         | otherwise = primi (x-1)
